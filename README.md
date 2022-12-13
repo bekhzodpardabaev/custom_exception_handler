@@ -38,3 +38,12 @@ def make_pretty_error(data, errors):
         else:
             data["errors"].append({"error": f"{error}", "message": errors[error]})
 ```
+
+
+settings.py
+```
+REST_FRAMEWORK = {
+    ...
+    "EXCEPTION_HANDLER": "apps.common.utils.custom_exception_handler",
+}
+```
